@@ -1,0 +1,705 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTMLの練習</title>
+        <style>
+            .i {
+                margin-left: 3em;
+                margin-right: 3em;
+            }
+        </style>
+        <style>
+            .center { text-align: center; }
+            .table-border { border-collapse: collapse; }
+            .table-border td { border: 1px solid #333; }
+            .center { text-align: center; }
+            .center * { margin-left: auto; margin-right: auto; }
+            .multicol::after {
+                content: "";
+                clear: both;
+                display: block;
+            }
+            .multicol .mcol {
+                float: left;
+                margin-left: 8px;
+                width: 100px;
+                padding: 2px;
+                border: 1px solid gray;
+            }
+            .vertical { writing-mode: vertical-rl; }
+        </style>
+        <style>
+            body, th, td { line-height: 150%; }
+        </style>
+        <style>
+            body { color: #333333; }
+            a:link { color: #009900; }
+            a:visited { color: #006600; }
+            a:active { color: #00aeff; }
+        </style>
+        <style>
+            a:link { color: #0000cc; }
+            a:visited { color: #500096; }
+            a:active { color: #00aeff; }
+        </style>
+        <!--<style>
+            a { text-decoration: none; }
+        </style>-->
+        <style>
+            a:hover { color: #00aeff; }
+        </style>
+        <style>
+            p { text-indent: 1em; }
+        </style>
+        <!--<meta http-equiv="Refresh" content="0; url=http://www.yahoo.co.jp/">-->
+    </head>
+    <body>
+        <div class="i">
+        <br>
+        ●本文<br><br>
+        <h4 id="mokuji"></h4>
+        <span style="font-size:16pt"><strong>目次</strong></span><br>
+        <ol>
+            <li><a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#HTMLnokihon">HTMLの基本</a>
+            <li><a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#font">フォント</a>
+            <li><a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#kaigyo">改行</a>
+            <li><a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#speace">スペース</a>
+            <li><a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#color">色</a>
+            <li><a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#rink">リンク</a>
+            <li><a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#click">クリッカブルマップ</a>
+            <li><a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#rist">リスト</a>
+            <li><a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#line">線</a>
+            <li><a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#bunsyo">文書構成</a>
+            <li><a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#img">画像</a>
+            <li><a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#back">背景画像（壁紙）</a>
+            <li><a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#action">アクション</a>
+            <li><a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#music">音・音楽</a>
+            <li><a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#table">テーブル</a>
+            <li><a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#layout">レイアウト</a>
+            <li><a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#sikaku">視覚効果</a>
+        </ol>
+        <ul>
+            <li><a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#tuzuki">続き</a>
+        </ul>
+        <h4 id="HTMLnokihon"></h4><br>
+        <spen style="font-size:25pt"><u><strong>1.HTMLの基本</strong></u></spen>　<a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#mokuji">[目次]</a><br><br>
+        ●アンパサンド(&amp;)：&amp;amp;<br>
+        ●右大不等号(&lt;)：&amp;lt;<br>
+        ●左大不等号(&gt;)：&amp;gt;<br>
+        ●ダブルクォーテーション(&quot;)：&amp;quot;<br>
+        ●シングルクォーテーション(&#39;)：&amp;#39;<br>
+        ●太字にするには&lt;b&gt;を用います。<br>
+        ●ダブルクォート(&quot;)やシングルクォート(&#39;)も文字参照を用いる必要があります。<br>
+        ●〇〇のバナー広告<br>
+        <img src="https://www/tohoho-web/banner/marumaru.gif" width=88 height=31 alt="○○"><br>
+        <h4 id="font"></h4><br>
+        <spen style="font-size:25pt"><u><strong>2.フォント</strong></u></spen>　<a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#mokuji">[目次]</a><br><br>
+        ●スタイルシートを使う...&lt;span style=" "&gt;<br>
+        ●&lt;font-family&gt;を用いて：<br>
+        文字を <span style="font-family:'ＭＳ 明朝'">明朝体</span> で表示します。<br>
+        文字を <span style="font-family:'Impact'">Impact</span> で表示します。<br>
+        ●&lt;font-size&gt;を用いて：<br>
+        通常の文字 <span style="font-size:16pt">16ptの文字</span><br>
+        ●&lt;b&gt;を用いた <b>太い文字</b><br>
+        スタイルシートを用いた <span style="font-weight:bold;">太い文字</span><br>
+        ●&lt;strong&gt;を用いて <strong>強調された文字</strong><br>
+        &lt;i&gt;を用いた <i>Italic</i><br>
+        ●スタイルシートを用いた <span style="font-style:italic;">Italic</span><br>
+        ●&lt;em&gt;を用いて <em>強調された文字</em><br>
+        ●&lt;u&gt;を用いて <u>下線文字</u><br>
+        ●&lt;border-bottom&gt;を用いて：<br>
+        <span style="border-bottom:1px dotted gray;">点下線</span><br>
+        ●pxとcolorを変えて：<br>
+        <span style="border-bottom:5px dotted blue;">点下線</span><br>
+        ●&lt;s&gt;を用いた <s>取り消し線</s><br>
+        ●&lt;del&gt;を用いた <del>取り消し線</del><br>
+        ●スタイルシートを用いた <span style="text-decoration:line-through">取り消し線</span><br>
+        ●&lt;blink&gt;を用いた <blink>点滅</blink>（非推奨）<br>
+        ●JavaScriptを用いた 
+        <script>
+            window.addEventListener("load", function() {
+                setInterval(function() {
+                    var objs = document.getElementsByClassName("blink");
+                    for (var i = 0; i < objs.length; i++) {
+                        obj = objs[i];
+                        if (obj.style.visibility == "visible") {
+                            obj.style.visibility = "hidden";
+                        } else {
+                            obj.style.visibility = "visible";
+                        }
+                    }
+                }, 800);
+            });
+        </script>
+        <div class="blink">点滅</div>
+        ●&lt;sub&gt;を用いて H<sub><small>2</small></sub>O<br>
+        ●&lt;sup&gt;を用いて E=mc<sup><small>2</small></sup><br>
+        <h4 id="kaigyo"></h4><br>
+        <span style="font-size:25pt"><u><strong>3.改行</strong></u></span>　<a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#mokuji">[目次]</a><br><br>
+        ●この位置で<br>改行します。<br>
+        注：&lt;br&gt;は行頭ではなく行末に用いる。<br>
+        ●一行一行が独立した意味を持つ&lt;civ&gt;： <br>
+        <div>Copyright (C) 2003 社甫々</div>
+        <div>初版：2003年9月23日</div>
+        ●ソースコードなどを表示する&lt;pre&gt;：<br>
+        <pre>
+        //ソースコード表示などにおすすめ
+        main()
+        {
+            printf("hello, world");
+        }
+        </pre>
+        ●改行を禁止&lt;nobr&gt;：<br>
+        <nobr>この文章はブラウザの横幅に関わらず改行されません。</nobr><br>
+        ●&lt;td&gt;や&lt;th&gt;を用いて（テーブルの内部）：<br>
+        <table>
+            <tr><td nowarp>この文章も改行されません。</td></tr>
+        </table>
+        ●改行禁止&lt;nobr&gt;特別に改行許可&lt;wbr&gt;を用いて：<br>
+        <nobr>織田信長、<wbr>豊臣秀吉、<wbr>徳川家康</nobr><br>
+        ●&lt;nobr&gt;のみを用いて：<br>
+        <nobr>織田信長、</nobr><nobr>豊臣秀吉、</nobr><nobr>徳川家康</nobr><br>
+        ●改行の隙間について：<br>
+        こんなところで改　行すると…　✕<br>
+        こんなところで改<!---->行しても大丈夫（コメントを入れる）<br>
+        <h4 id="speace"></h4><br>
+        <span style="font-size:25pt"><u><strong>4.スペース</strong></u></span>　<a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#mokuji">[目次]</a><br><br>
+        ●スペースを                          こんなにいれても一つ分しかあかない（半角）<br>
+        ●全角スペースを用いて：<br>
+        aaa　　　　aaa<br>
+        ●特殊文字&nbsp;を用いて
+        aaa&nbsp;&nbsp;&nbsp;&nbsp;aaa<br>
+        ●&lt;pre&gt;を用いて：<br>
+        <pre>
+            aaa       aaa
+        </pre>
+        ●ページの四隅のスペースをなくす：<br>
+        スタイルシート&lt;style&gt;を用いる<br>
+        <style>
+            body { margin: 0; }
+        </style>
+        ●左右に適度な余白を開ける：<br>
+        スタイルシートを用いる&amp;&lt;head&gt;～&lt;/head&gt;にクラス&lt;div&gt;を定義（コードを参照）<br>
+        <div class=i>
+            左右に空白が付きます。
+        </div>
+        ●行間の適度なスペース：<br>
+        スタイルシート line-height を用いる&amp;&lt;head&gt;～&lt;/head&gt;に記述（コードを参照）<br>
+        <h4 id="color"></h4><br>
+        <span style="font-size:25pt"><u><strong>5.色</strong></u></span>　<a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#mokuji">[目次]</a><br><br>
+        ●ページ全体の色を変える：<br>
+        &lt;body&gt;に background-color を指定
+        <style>
+            body {
+                background-color:#ffc;
+            }
+            div {
+                background-color:#ffc;
+            }
+            u {
+                background-color: rgb(255, 204, 242)
+            }
+        </style><br>
+        ●文字の色を変える：<br>
+         color を&lt;span&gt;や&lt;div&gt;など任意のタグに指定<br>
+        <span style="color:red">赤い文字</span><br>
+        ●dolorを変えて：<br>
+        <span style="color:blueviolet">紫色の文字</span><br>
+        ●文字の色を一度に変える：<br>
+        &lt;head&gt;～&lt;/head&gt;にスタイルシートを記述（コードを参照）<br>
+        ●リンクテキストにマウスを乗せた時に色を変える：<br>
+        スタイルシート hover を用いる
+        <style>
+            a:hover { color: #0098de; }
+        </style><br>
+        <h4 id="rink"></h4><br>
+        <spen style="font-size:25pt"><u><strong>6.リンク</strong></u></spen>　<a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#mokuji">[目次]</a><br><br>
+        ●&lt;a&gt;を用いて：<br>
+        <a href="http:www.tohoho-web.com/how2/link.htm">リンク</a><br>
+        ●ジャンプ先が同じサイトの場合<br>
+        http://～を省略<br>
+        <a href="/how2/link.htm">リンク</a><br>
+        ●ジャンプ先が同じフォルダの場合<br>
+        さらに /～/ を省略<br>
+        <a href="link.htm">リンク</a><br>
+        ●一つ上のフォルダのファイルにジャンプする場合<br>
+        ドットドット(..)を用いる<br>
+        <a href="../index.htm">トップ</a><br>
+        ●ページの途中にリンク<br>
+        &lt;h4&gt;を用いる&amp;任意のタグに id="名前"をつける<br>
+        <h4 id="nameLink">ページの途中にリンクするには</h4>
+        リンクを貼る<br>
+        <a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#nameLink">ページの途中にリンクするには</a><br>
+        ●画像をリンクボタンにする：<br>
+        &lt;img&gt;タグを&lt;a&gt;で囲む<br>
+        注：border=0 を指定しないと画像の周りに枠線が表示される<br>
+        　　&lt;img&gt;タグの前後にスペースや改行を空けるとゴミが表示される<br>
+        <a href="xx.html"><ing src="xx.gif" alt="xx" border="0 width=10" height="10"></a><br>
+        ●リンクの色を変える<br>
+        &lt;head&gt;～&lt;/head&gt;に記述を加える（コードを参照）<br>
+        ●一つ一つのリンクの色を個別に設定する<br>
+        <a href="xx.htm" style="color:red">XXXX</a><br>
+        ●リンクの下線を表示しない<br>
+        スタイルシート text-decoration を用いる<br>
+        &lt;head&gt;～&lt;/head&gt;に記述を加える（コードを参照）<br>
+        ●リンクにマウスを乗せたときに色を変える<br>
+        &lt;head&gt;～&lt;/head&gt;に記述を加える（コードを参照）<br>
+        フォント、色などアレンジを加えることもできる<br>
+        ●戻るリンク<br>
+        JavaScript の history.back() や history.go() を用いる<br>
+        ●history.back() を用いて：<br>
+        <a href="javascript:history.back()">[戻る]</a><br>
+        ●history.go() を用いて：<br>
+        <a href="javascript:history.go(-1)">[戻る]</a><br>
+        ●別ページに自動ジャンプ<br>
+        &lt;head&gt;～&lt;/head&gt;に記述を加える（コードを参照）<br>
+        　　0を5に変更すると、5秒後にジャンプする<br>
+        ●セレクトボックスからジャンプ<br><br>
+            <select onchange="location.href=this.options[this.selectedIndex].value">
+            <option value="#">検索サイトにジャンプ
+            <option value="http://www.yahoo.co.jp/">Yahoo
+            <option value="http://www.google.co.jp/">Google
+            <option value="http://www.infoseek.co.jp/">Infoseek
+        </select><br><br>
+        ●Word や Exel を開く<br>
+        ●Word の場合：<br>
+        <a href="sample.doc">サンプル文書</a><br>
+        ●Exel の場合：<br>
+        <a href="sample.xls">サンプルブック</a><br>
+        ●閉じるリンクをつける<br>
+        <a href="#" onclick="window.close()">[閉じる]</a>　　注：ページを閉じます<br>
+        <h4 id="click"></h4><br>
+        <span style="font-size:25pt"><u><strong>7.クリッカブルマップ</strong></u></span>　<a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#mokuji">[目次]</a><br><br>
+        ●簡易クリッカブルマップ<br>
+        リンク付きの画像を横に並べる<br>
+        <div style="white-space:nowrap">
+            <a href="aa.htm"><img src="aa.gif" border=0 alt="AA"></a>
+            <a href="bb.htm"><img src="bb.gif" border=0 alt="BB"></a>
+            <a href="cc.htm"><img src="cc.gif" border=0 alt="CC"></a>
+        </div>
+        ●サーバサイドクリッカブルマップ<br>
+        地図など<br>
+        <a href="smap.cgi"><img src="smap.gif" border=0 ismap></a><br>
+        ●クライアントサイドクリッカブルマップ<br>
+        最もポピュラー<br>
+        &lt;map&gt;を用いて：<br>
+        <img src="map.gif" alt="画像" usemap="#map1" border=0 width=243 height=68>
+        <map name="map1">
+            <area shape="rect" coords="11,16,63,54" alt="Page1" href="page1.htm">
+            <area shape="poly" coords="73,50,159,50,159,24,73,9" alt="Page2" href="page2.htm">
+            <area shape="circle" coords="197,32,28" alt="Page3" href="page3.htm">
+            <area shape="default" alt="Other" href="default.htm">
+        </map>
+        <h4 id="rist"></h4><br>
+        <span style="font-size:25pt"><u><strong>8.リスト</strong></u></span>　<a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#mokuji">[目次]</a><br><br>
+        ●&lt;ul&gt;を用いて（順序なしリスト）：
+        <ul>
+            <li>カレーライス
+            <li>スパゲッティ
+        </ul>
+        ●&lt;ol&gt;を用いて（順序リスト）：
+        <ol>
+            <li>カレーライス
+            <li>スパゲッティ
+        </ol>
+        ●スタイルシート&lt;list-style-type&gt;を用いて：<br>
+        ●type&lt;lower-alpha&gt;：
+        <ol style="list-style-type:lower-alpha">
+            <li>おでん
+            <li>うどん
+        </ol>
+        ●type&lt;circle&gt;：
+        <ol style="list-style-type:circle">
+            <li>おでん
+            <li>うどん
+        </ol>
+        ●定義リスト&lt;dl&gt;&lt;dt&gt;&lt;dd&gt;：
+        <dl>
+            <dt>HTML</dt>
+            <dd>HTMLとは・・・</dd>
+            <dt>CSS</dt>
+            <dd>CSSとは・・・</dd>
+        </dl>
+        注：&lt;/dt&gt;&lt;/dd&gt;のタグは省略可<r><br><br>
+        <h4 id="line"></h4><br>
+        <span style="font-size:25pt"><u><strong>9.線</strong></u></span>　<a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#mokuji">[目次]</a><br><br>
+        ●&lt;hr&gt;、スタイルシート&lt;width&gt;&lt;height&gt;&lt;margin&gt;&lt;background-color&gt;を用いて：<br>
+        <hr>
+        <hr style="width:300px">
+        <hr style="width:300px; margin-left:0">
+        <hr style="width:300px; margin-right:0">
+        <hr style="height:5px; background-color:#66f">
+        <hr style="height:5px; background-color:#66f; border:0">
+        ●縦線：<br>
+        <div style="background-color:gray; width:2px; height:40px;"></div>
+        ●枠線で囲む：<br>
+        スタイルシート&lt;border&gt;
+        <div style="border:1px solid gray; padding:5px;">
+            あああああ
+        </div>
+        ●斜線、曲線、折れ線など：<br>
+        VMLを用いる<br><br>
+        ＜コードの例＞<br>
+        <span style="font-family:'Lucida Console'">
+        &lt;html <span style="color:red">xmlns:v="urn:schemas-microsoft-com:vml</span>"&gt;<br>
+            &lt;head&gt;<br>
+                &lt;title&gt;VML TEST&lt;/title&gt;<br>
+                <span style="color:red">
+                    &lt;style&gt;<br>
+                    v\:* { behavior: url(#default#VML); }<br>
+                    &lt;/style&gt;<br>
+                </span>
+                &lt;/head&gt;<br>
+                &lt;body&gt;<br>
+                <span style="color:red">
+                    &lt;v:line from="0,100" to="300,100" strokecolor="black" /&gt;<br>
+                    &lt;v:line from="0,100" to="0,0" strokecolor="black" /&gt;<br>
+                </span>
+                &lt;/body&gt;<br>
+        &lt;/html&gt;
+        </span><br><br>
+        詳細：<a href="https://www.tohoho-web.com/wwwvml.htm">とほほのVML入門</a><br>
+        <h4 id="bunsyo"></h4><br>
+        <span style="font-size:25pt"><u><strong>10.文書構成</strong></u></span>　<a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#mokuji">[目次]</a><br><br>
+        ●ページのタイトル：<br>
+        &lt;title&gt;タイトル&lt;/title&gt;<br>
+        ●章や節のタイトル：<br>
+        &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, &lt;h6&gt;（Heading見出し）<br>
+        ＜例＞<br>
+        <h1>第１章 HTML入門</h1>
+        <h2>1.1 HTMLとは</h2>
+        <p>HTML は HyperText Markup Language の略で・・・</p>
+        <h2>1.2 CSSとは</h2>
+        <p>CSS は Cascading Style Sheets の略で・・・</p><br>
+        ●セクション&lt;section&gt;、アーティクル&lt;article&gt;<br>
+        ＜例＞<br>
+        <section>
+            <h1>第１章 HTML入門</h1>
+            <section>
+                <h2>1.1 HTMLとは</h2>
+                <p>HTML は HyperText Markup Language の略で・・・</p>
+            </section>
+            <section>
+                <h2>1.2 CSSとは</h2>
+                <p>CSS は Cascading Style Sheets の略で・・・</p>
+            </section>
+        </section><br>
+        ●段落の記述&lt;p&gt;<br>
+        注：&lt;/p&gt;は省略しなくても良いが、段落の範囲を明示するために省略しない方が良い<br>
+        <p>この部分がひとつの段落になります。</p>
+        <p>この部分が次の段落になります。</p>
+        ●段落の先頭文字を字下げ&lt;text-indent&gt;<br>
+        &lt;head&gt;に記述（コードを参照）<br>
+        <h4 id="img"></h4><br>
+        <span style="font-size:25pt"><u><strong>11.画像</strong></u></span>　<a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#mokuji">[目次]</a><br><br>
+        ●&lt;img.src="..."&gt;を用いて：<br>
+        src:画像ファイルのURL、alt:必ず、width&amp;height:極力指定<br>
+        　まめ↓<br>
+        <div class=i>
+        <img src="https://www.tohoho-web.com/image/mame.gif" alt="マメ" width=25 height=25><br>
+        </div><br>
+        画像が上手く表示されないとき（コピペ）<br>
+        <ul>
+            <li>ファイル名が誤っている。(意外に多いので念の為再チェック)
+            <li>フォルダ名が誤っている。フォルダの指定方法に習熟していない場合は、HTMLファイルと画像ファイルを同じフォルダに置き、src="xxx.gif" のように src 属性に画像のファイル名のみを指定するようにしてみましょう。
+            <li>GIF ファイルを作成するのに、ファイル名だけを xxx.bmp から xxx.gif に変更している。(対応ソフトで変換する必要があります。)
+            <li>画像ファイルをアップロードするのを忘れている。
+            <li>画像ファイルへのリンクが file: で始まる名前になっている。src="ファイル名" や、src="フォルダ名/ファイル名" など、file: で始まらない名前にしましょう。
+            <li>ファイル名の大文字と小文字を誤っている。(サーバーが UNIX 系の場合は、ファイル名の大文字と小文字は別の文字として扱われます。)
+        </ul>
+        ●画像と画像の間の隙間をなくす：<br>
+        <ul>
+            <li>&lt;img&gt;タグの&gt;と&lt;の間にスペースを空けない
+            <li>コメントを用いる
+        </ul>
+        ●画像の上に文字を乗せる：<br>
+        スタイルシートを用いる<br>
+        &lt;background-image:url&gt;<br>
+        <div style="background-image:url(https://www.tohoho-web.com/image/ki2.gif); width:100px; height:20px; text-align:center; color:red;">
+            あいうえお
+        </div><br>
+        ●代替テキスト：<br>
+        ○○ページへ <a href="next.html"><img src="https://www.tohoho-web/go.gif"
+            alt="Go!!" width=20 height=20 border=0></a><br>
+        注：alt属性は必須<br>
+        <img src="xxx.gif" alt="" width=20 height=20><br>
+        デザインだけのためにはalt=&quot;&quot;でよい<br>
+        <h4 id="back"></h4><br>
+        <span style="font-size:25pt"><u><strong>12.背景画像（壁紙）</strong></u></span>　<a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#mokuji">[目次]</a><br><br>
+        ●スタイルシート&lt;background-image&gt;を用いる<br>
+        <!--<style>
+            body { background-image: url(https://www.tohoho-web/image/back.png);
+            }
+        </style>-->
+        ●背景をスクロールさせない：<br>
+        スタイルシート&lt;attachment&gt;を用いる<br>
+        <!--<style>
+            body {
+              background-image: url(https://www.tohoho-web/image/back.png);
+              background-attachment: fixed;
+            }
+        </style>-->
+        ●背景を縦（横）方向のみに並べる：<br>
+        スタイルシート&lt;background-repeat&gt;を用いる<br>
+        repeat-y:縦方向<br>
+        repeat-x:横方向<br>
+        <!--<style>
+            body {
+              background-image: url(back.gif);
+              background-repeat: repeat-y;
+            }
+        </style>-->
+        ●背景画像を一つのみ表示する：<br>
+        スタイルシート&lt;background-repeat&gt;&lt;background-position&gt;<br>
+        <!--<style>
+            body {
+              background-image: url(back.gif);
+              background-repeat: no-repeat;
+              background-position: center center;
+            }
+        </style>-->
+        <h4 id="action"></h4><br>
+        <span style="font-size:25pt"><u><strong>13.アクション</strong></u></span>　<a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#mokuji">[目次]</a><br><br>
+        ●JavaScriptのアクション：&lt;onckick&gt;<br>
+        <input type="button" value="Click me!" onclick="alert('OK')">
+        <span onclick="alert('OK')">Click me!</span><br>
+        ●マウスを乗せた時：&lt;onmouseover&gt; <a href="xx.htm" onmouseover="alert('IN')">☆☆</a><br>
+        　　　　　離した時：&lt;onmouseout&gt; <a href="xx.htm" onmouseout="alert('OUT')"> ☆☆</a><br>
+        参考：「<a href="https://www.tohoho-web.com/how2/link.htm#hover">リンクにマウスを乗せたときに色を変えるには</a>」<br>
+        ●ページを開いたとき：&lt;script&gt;&amp;windowsオブジェクトの&lt;onload&gt;<br>
+        ＜例＞<br>
+        <span style="font-family:'Lucida Console'">
+            &lt;script&gt;<br>
+            window.onload = function() {<br>
+                alert("Welcome to my homepage!!");<br>
+            }<br>
+            &lt;/script&gt;<br><br>
+        もしくは<br>
+            &lt;script&gt;<br>
+            window.addEventListener("load", function() {<br>
+              // 初期化処理1<br>
+            });<br>
+            window.addEventListener("load", function() {<br>
+              // 初期化処理2<br>
+            });<br>
+            &lt;/script&gt;<br>
+        </span><br>
+        ●定期的に実行：&lt;setInterval&gt;<br>
+        5000ミリ秒(5秒)毎にHello!! というアラートダイアログを表示（コードを参照）<br>
+        <!--<script>
+         window.addEventListener("load", function() {
+            setInterval(function() {
+                alert("Hello!");
+            }, 5000);
+        });
+        </script>-->
+        <h4 id="music"></h4><br>
+        <span style="font-size:25pt"><u><strong>14.音・音楽</strong></u></span>　<a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#mokuji">[目次]</a><br><br>
+        ●BGMを鳴らす：<br>
+        &lt;bgsound&gt;&lt;embed&gt;&lt;object&gt;今では&lt;audio&gt;<br>
+        <audio src="https://www.tohoho-web/audio/sound.mp3" autoplay loop></audio>
+        ●再生・停止：<br>
+        pause()やplay()<br>
+        <audio id="audio1" src="https://www.tohoho-web/audio/sound.mp3" autoplay loop></audio>
+        <input type="button" value="Pause" onclick="document.getElementById('audio1').pause()">
+        <input type="button" value="Play" onclick="document.getElementById('audio1').play()"><br>
+        <h4 id="table"></h4><br>
+        <span style="font-size:25pt"><u><strong>15.テーブル</strong></u></span>　<a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#mokuji">[目次]</a><br><br>
+        ●テーブル（表）<br>
+        テーブル&lt;table&gt;、表題&lt;caption&gt;、1行&lt;tr&gt;、ヘッダのマス&lt;th&gt;、データのマス&lt;td&gt;<br>
+        border=1は枠線の太さ<br>
+        <table border=1>
+            <caption>【ブラウザと開発元】</caption>
+            <tr><th>ブラウザ</th><th>開発元</th></tr>
+            <tr><td>Chrome</td><td>Google</td></tr>
+            <tr><td>Firefox</td><td>Mozilla</td></tr>
+            <tr><td>Safari</td><td>Apple</td></tr>
+        </table><br>
+        ●特定のテーブルにスタイルを適用する：<br>
+        style属性を用いる<br>
+        &lt;table style="border-collapse:collapse;"&gt;<br>
+            &lt;tr&gt;&lt;th style="border:1px solid gray;"&gt;...&lt;/th&gt;&lt;/tr&gt;<br>
+            &lt;tr&gt;&lt;td style="border:1px solid gray;"&gt;...&lt;/td&gt;&lt;/tr&gt;<br>
+        &lt;/table&gt;&lt;br&gt;<br>
+        ●全てのテーブルにスタイルを適用する：<br>
+        table, th, td 要素にスタイルを追加<br>
+        <span style="font-family:Lucida Console"><br>
+        &lt;style&gt;<br>
+            table { border-collapse: collapse; }<br>
+            th, td { border: 1px solid gray; }<br>
+        &lt;/style&gt;<br>
+        </span><br>
+        ●特定のクラスを適用したテーブルにスタイルを適用する；<br>
+        class=mytblを指定<br>
+        <span style="font-family:Lucida Console"><br>
+        &lt;style&gt;<br>
+            .mytbl { border-collapse: collapse; }<br>
+            .mytbl th, .mytbl td { border: 1px solid gray; }<br>
+        &lt;/style&gt;<br>
+        &lt;table class="mytbl"&gt;<br>
+            :<br>
+         &lt;/table&gt;<br>
+        </span><br>
+        ●特定のテーブルにのみ適用：<br>
+        id属性を用いる：<br>
+        <span style="font-family:Lucida Console"><br>
+        &lt;style&gt;<br>
+            table#tbl1 { border-collapse: collapse; }<br>
+            #tbl1 th, #tbl1 td { border: 1px solid gray; }<br>
+        &lt;/style&gt;<br>
+        &lt;table id="tbl1"&gt;<br>
+            :<br>
+        &lt;/table&gt;<br>
+        </span><br>
+        ●テーブルのn番目にスタイルを適用：<br>
+        nth-child(n)を用いる：<br>
+        <span style="font-family:Lucida Console"><br>
+        &lt;style&gt;<br>
+            table { width: 300px; border-collapse: collapse; }<br>
+            th, td { border: 1px solid gray; }<br>
+            th { background-color: #ccf; }<br>
+            td:nth-child(1) { background-color: #fcc; }<br>
+            td:nth-child(2) { background-color: #cfc; }<br>
+        &lt;/style&gt;<br>
+        &lt;table&gt;<br>
+            &lt;tr&gt;&lt;th&gt;AAA&lt;/th&gt;&lt;th&gt;BBB&lt;/th&gt;&lt;/tr&gt;<br>
+            &lt;tr&gt;&lt;td&gt;A1&lt;/td&gt;&lt;td&gt;B1&lt;/td&gt;&lt;/tr&gt;<br>
+            &lt;tr&gt;&lt;td&gt;A2&lt;/td&gt;&lt;td&gt;B2&lt;/td&gt;&lt;/tr&gt;<br>
+            &lt;tr&gt;&lt;td&gt;A3&lt;/td&gt;&lt;td&gt;B3&lt;/td&gt;&lt;/tr&gt;<br>
+        &lt;/table&gt;<br>
+        </span><br>
+        ●テーブルの中身を改行させない：<br>
+        white-space: nowarpを用いる<br>
+        ●カラム(セル)を連結(結合)する：<br>
+        &lt;td&gt;や&lt;th&gt;にcolspan=nやrowspan=n属性を指定<br>
+        <table border=1>
+            <tr><td colspan=2>横連結</td></tr>
+            <tr><td rowspan=2>縦連結</td><td>○○</td></tr>
+            <tr><td>△△</td></tr>
+        </table><br>
+        ●テーブルの幅や高さを指定：<br>
+        &lt;table&gt;、&lt;tr&gt;、&lt;th&gt;、&lt;td&gt;に、スタイルシートのwidthやheightを指定<br>
+        <table style="width:200px; height:100px;">
+            <tr><td>東京都</td><td>13,742,906</td></tr>
+            <tr><td>広島県</td><td>2,830,069</td></tr>
+        </table><br>
+        ●カラムの内容を左寄せ、右寄せする：<br>
+        &lt;tr&gt;、&lt;th&gt;、&lt;td&gt;にスタイルシートのtext-alignを指定<br>
+        <style>
+            #tb3 { border-collapse: collapse; width: 200px; }
+            #tb3 th, #tb3 td { border: 1px solid gray; }
+            #tb3 td:nth-child(2) { text-align:right; }
+        </style>
+        <table id="tb3">
+            <tr><td>東京都</td><td>13,742,906</td></tr>
+            <tr><td>広島県</td><td>2,830,069</td></tr>
+        </table><br>
+        ●カラムの内容を上寄せ、下寄せする：<br>
+        &lt;tr&gt;、&lt;th&gt;、&lt;td&gt;にスタイルシートのvertical-alignを指定<br>
+        <style>
+            #tb4 { border-collapse: collapse; width: 150px; height: 50px; }
+            #tb4 th, #tb4 td { border: 1px solid gray; }
+            #tb4 td:nth-child(1) { vertical-align: top; }
+            #tb4 td:nth-child(2) { vertical-align: bottom; }
+        </style>
+        <table id="tb4">
+            <tr><td>上寄せ</td><td>下寄せ</td></tr>
+        </table><br>
+        ●テーブルの背景色を指定：<br>
+        &lt;table&gt;、&lt;tr&gt;、&lt;th&gt;、&lt;td&gt;にスタイルシートのbackground-colorを用いて：<br>
+        <style>
+            #tb5 { border-collapse: collapse; width: 200px; }
+            #tb5 th, #tb5 td { border: 1px solid gray; }
+            #tb5 th { background-color: #cfc; }
+            #tb5 td { background-color: #ffc; }
+        </style>
+        <table id="tb5">
+            <tr><th>東京都</th><td>13,742,906</td></tr>
+            <tr><th>広島県</th><td>2,830,069</td></tr>
+        </table><br>
+        ●テーブルの背景画像を指定：<br>
+        &lt;table&gt;、&lt;tr&gt;、&lt;th&gt;、&lt;td&gt;にスタイルシートのbackground-imageを用いて<br>
+        <style>
+            #tb6 { border-collapse: collapse; width: 200px; }
+            #tb6 th, #tb6 td { border: 1px solid gray; }
+            #tb6 th { background-image: url(https://www.tohoho-web.com/image/ki2.gif); }
+        </style>
+        <table id="tb5">
+            <tr><th>東京都</th><td>13,742,906</td></tr>
+            <tr><th>広島県</th><td>2,830,069</td></tr>
+        </table><br>
+        ●テーブルを横に二つ並べる：<br>
+        外側にもうひとつ大きなテーブルを設ける：<br>
+        <table>
+            <tr>
+             <td>
+              <table border=1>
+               <tr><td>ああ</td><td>ああ</td></tr>
+               <tr><td>ああ</td><td>ああ</td></tr>
+              </table>
+             </td>
+             <td>
+              <table border=1>
+               <tr><td>ああ</td><td>ああ</td></tr>
+               <tr><td>ああ</td><td>ああ</td></tr>
+              </table>
+             </td>
+            </tr>
+        </table><br>
+        スタイルシートのfloatを用いる：<br>
+        <table border=1 style="float:left; margin-right:.5em;">
+            <tr><td>ああ</td><td>ああ</td></tr>
+            <tr><td>ああ</td><td>ああ</td></tr>
+        </table>
+        <table border=1>
+            <tr><td>ああ</td><td>ああ</td></tr>
+            <tr><td>ああ</td><td>ああ</td></tr>
+        </table><br>
+        ●<a href="https://www.tohoho-web.com/tech/round-table.html">角の丸いテーブルを表示する</a><br>
+        <h4 id="layout"></h4><br>
+        <span style="font-size:25pt"><u><strong>16.レイアウト</strong></u></span>　<a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#mokuji">[目次]</a><br><br>
+        ●中央に表示（センタリング）：<br>
+        スタイルシートtext-alignを用いて：<br>
+        <div class="center">
+            テキスト
+        </div><br>
+        テーブルなど：margin-rightとmargin-leftにautoを指定<br>
+        <div class="center">
+            <table class="table-border">
+            <tr><td>東京都</td><td>13,742,906</td></tr>
+            <tr><td>広島県</td><td>2,830,069</td></tr>
+            </table>
+        </div><br>
+        ●<a href="https://www.tohoho-web.com/ex/centering.html">センタリング(中央揃え・中央寄せ)</a><br>
+        ●floatにleftを指定：<br>
+        <div class="multicol">
+            <div class="mcol">
+              いろはにほへとちりぬるを
+            </div>
+            <div class="mcol">
+              わかよたれそつねんらむ
+            </div>
+            <div class="mcol">
+              うゐのおくやまけふこえて
+            </div>
+        </div><br>
+        ●文章を縦書きにする：<br>
+        スタイルシートwriting-modeを用いる<br>
+        <div class="vertical" style="width:120px; height:80px; border:1px solid gray; padding:2px;">
+            いるはにほへとちりぬるをわかよたれそつねならむうゐのおくやまけふこえて
+        </div><br>
+        ●画像や文字を好きな位置に表示する：<br>
+        スタイルシートpositionを用いる<br>
+        <div style="position:absolute; top:12820px; left:200px;"><u>
+            Hello!!
+        </u></div><br>
+        <h4 id="sikaku"></h4><br>
+        <span style="font-size:25pt"><u><strong>17.視覚効果</strong></u></span>　<a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#mokuji">[目次]</a><br><br>
+
+        <br>
+        <h4 id="tuzuki"><h4><br>
+        作業途中：視覚効果から<br> 
+        続き-> <a href="https://www.tohoho-web.com/how2/index.htm">とほほのWWW入門/逆引きリファレンス</a>　<a href="file://wsl.localhost/Ubuntu/home/yamada/py/s2201115/sample.html#mokuji">[目次]</a><br><br>
+    </div>
+    </body>
+</html>
